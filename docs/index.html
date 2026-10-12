@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="pages">
+  <head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' https:; connect-src 'self' https://api.dictionaryapi.dev; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5fb" />
+    <meta
+      name="description"
+      content="Word Atlas 英语词汇学习：生活、旅行、商务与电池储能。美音朗读、语境查词与个人词库。"
+    />
+    <title>Word Atlas · 词汇地图</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="Word Atlas 首页"
+        ><span class="brand-mark">w<span>·</span></span
+        ><span>Word Atlas<small>你的世界，从词汇开始</small></span></a
+      >
+      <div class="nav-label">学习空间 / WORKSPACE</div>
+      <nav aria-label="主要导航">
+        <button class="nav-item active" data-view="overview">
+          <span data-icon="grid"></span>学习概览
+        </button>
+        <button class="nav-item" data-view="library">
+          <span data-icon="book"></span>全部词库<span class="nav-count" id="nav-total">—</span>
+        </button>
+        <button class="nav-item" data-view="favorite">
+          <span data-icon="star"></span>我的收藏
+        </button>
+        <button class="nav-item" data-view="review">
+          <span data-icon="repeat"></span>到期复习<span class="nav-count" id="nav-due">0</span>
+        </button>
+      </nav>
+      <div class="nav-label">我的工具 / TOOLS</div>
+      <button class="nav-item" data-action="import">
+        <span data-icon="upload"></span>导入词汇
+      </button>
+      <button class="nav-item" data-view="incomplete">
+        <span data-icon="edit"></span>待补充词条<span class="nav-count" id="nav-incomplete">0</span>
+      </button>
+      <button class="nav-item" data-action="export">
+        <span data-icon="download"></span>导出词库
+      </button>
+      <button class="nav-item" data-action="settings">
+        <span data-icon="settings"></span>发音与设置
+      </button>
+      <div class="side-note">
+        <span class="note-spark">✧</span><strong>A little, every day.</strong>
+        <p>每天积累一点，<br />让表达更从容。</p>
+        <span class="note-line"></span>
+      </div>
+      <div class="profile">
+        <span class="avatar">L</span
+        ><span>My learning space<small>个人学习空间 · 本地保存</small></span
+        ><span class="online-dot" title="本地服务"></span>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span id="breadcrumb">我的学习空间 <span class="slash">/</span> 学习概览</span
+        ><span class="topbar-right"
+          ><span class="status-dot"></span> ENGLISH, CONNECTED
+          <button class="icon-button" data-action="settings" aria-label="打开设置">
+            <span data-icon="settings"></span></button
+        ></span>
+      </header>
+      <main>
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow">YOUR WORDS. YOUR WORLD.</p>
+            <h1 id="page-title">今天，探索一点新世界<span class="title-dot">.</span></h1>
+            <p id="page-subtitle">从生活里的小事，到专业里的大事。每一个词，都有它的用处。</p>
+          </div>
+          <button class="button button-white" data-action="import">
+            <span data-icon="plus"></span>添加词汇
+          </button>
+        </section>
+        <p id="published-notice" class="small muted" hidden>
+          统一词库 · 新增词汇由本地发布；收藏与复习进度保存在当前浏览器。
+        </p>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <span class="hero-label"><span class="tiny-spark">✦</span> 把单词放回真实语境</span>
+            <h2>不止记住单词，<br />更懂如何表达。</h2>
+            <p>听一听美式发音，在例句中理解词义。<br />点开任何生词，让好奇心带你继续探索。</p>
+            <button class="button button-light" data-action="study">
+              开始今日学习 <span data-icon="arrow"></span></button
+            ><span class="hero-foot">四大主题词库 · 语境关联学习</span>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="globe">
+              <div class="globe-line horizontal h1"></div>
+              <div class="globe-line horizontal h2"></div>
+              <div class="globe-line horizontal h3"></div>
+              <div class="globe-line vertical v1"></div>
+              <div class="globe-line vertical v2"></div>
+              <div class="globe-line vertical v3"></div>
+            </div>
+            <span class="floating-tag tag-one">hello, world <span>↗</span></span
+            ><span class="floating-tag tag-two"><span>ϟ</span> energy</span
+            ><span class="floating-tag tag-three">explore <span>✧</span></span
+            ><span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span
+            ><span class="art-dot"></span>
+          </div>
+        </section>
+        <section class="stats" aria-label="学习统计">
+          <div class="stat">
+            <span class="stat-icon lavender" data-icon="book"></span>
+            <div>
+              <span class="stat-label">词库总量</span><strong id="stat-total">—</strong
+              ><small>词汇与专业术语</small>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon green" data-icon="check"></span>
+            <div>
+              <span class="stat-label">已学习</span><strong id="stat-learned">0</strong
+              ><small>持续积累，稳步向前</small>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon peach" data-icon="sun"></span>
+            <div>
+              <span class="stat-label">今日已复习</span><strong id="stat-today">0</strong
+              ><small>每日目标 10 个词</small>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon blue" data-icon="repeat"></span>
+            <div>
+              <span class="stat-label">到期复习</span><strong id="stat-due">0</strong
+              ><small>让记忆更长久</small>
+            </div>
+          </div>
+        </section>
+        <section class="collection-section">
+          <div class="section-heading">
+            <div>
+              <h2>探索你的词汇地图</h2>
+              <p>选择一个领域，从感兴趣的地方开始。</p>
+            </div>
+            <span class="section-kicker">FOUR WORLDS, ONE LANGUAGE</span>
+          </div>
+          <div class="collections" id="collections"></div>
+        </section>
+        <section class="learning-grid">
+          <div class="word-section">
+            <div class="section-heading word-heading">
+              <div>
+                <h2 id="list-title">为你精选</h2>
+                <p id="result-count">加载词库中…</p>
+              </div>
+              <label class="search-box"
+                ><span data-icon="search"></span
+                ><input
+                  id="search"
+                  placeholder="搜索单词、中文或释义…"
+                  type="search"
+                  aria-label="搜索词汇"
+                /><kbd>/</kbd></label
+              >
+            </div>
+            <div class="filter-bar">
+              <div class="filter-tabs" id="filters">
+                <button class="filter active" data-filter="all">全部词汇</button
+                ><button class="filter" data-filter="new">未学习</button
+                ><button class="filter" data-filter="learned">已学习</button>
+              </div>
+              <button class="text-button" data-action="study">
+                闪卡学习 <span data-icon="arrow"></span>
+              </button>
+            </div>
+            <div id="word-list" class="word-list"></div>
+            <div class="list-footer">
+              <button class="text-button" id="load-more" data-action="more" hidden>
+                查看更多词汇 ↓</button
+              ><span id="list-footnote">点击词条，探索英文释义与语境</span>
+            </div>
+          </div>
+          <aside class="learning-aside">
+            <section class="daily-card">
+              <div class="section-heading">
+                <h3>每天一小步</h3>
+                <span class="badge">DAILY GOAL</span>
+              </div>
+              <div class="progress-ring" id="progress-ring">
+                <div>
+                  <strong id="goal-progress">0<span>/ 10</span></strong
+                  ><small>今日已复习词汇</small>
+                </div>
+              </div>
+              <p id="goal-message">给自己十个词的时间。</p>
+              <button class="button button-purple full" data-action="study">
+                继续学习 <span data-icon="arrow"></span>
+              </button>
+            </section>
+            <section class="tip-card">
+              <span class="tip-label"><span data-icon="cursor"></span> 学习小提示</span>
+              <h3>一个例句，<br />不止一个收获。</h3>
+              <p>例句里的英文单词都可以点击。遇到陌生的表达，点一下就能查看释义。</p>
+              <div class="tip-example">
+                A <button data-lookup="journey">journey</button> begins<br />with a single
+                <button data-lookup="step">step</button>.
+              </div>
+              <small>试试点击上面的下划线单词 ↗</small>
+            </section>
+          </aside>
+        </section>
+        <footer class="footer">
+          <span>Word Atlas <span class="footer-dot">·</span> 为你的每一种可能，积累词汇。</span
+          ><span>LEARN A WORD. OPEN A WORLD. ↗</span>
+        </footer>
+      </main>
+    </div>
+    <dialog id="detail-dialog" class="detail-dialog"><div id="detail-content"></div></dialog>
+    <dialog id="import-dialog" class="import-dialog">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">BUILD YOUR OWN ATLAS</p>
+          <h2>把你的词汇，带进来</h2>
+        </div>
+        <button class="icon-button" data-close="import-dialog" aria-label="关闭导入">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <p class="muted">单个添加，或一次导入整张词汇表。后台会自动补全缺失内容。</p>
+      <div class="modal-tabs">
+        <button class="active" data-import-tab="single">单个词汇</button
+        ><button data-import-tab="batch">批量导入</button>
+      </div>
+      <form id="single-form">
+        <label
+          >英文单词或短语 <span class="required">*</span
+          ><input
+            name="word"
+            placeholder="例如：itinerary / state of charge"
+            required
+            maxlength="120" /></label
+        ><label>所属领域<select name="category" class="category-select"></select></label>
+        <div class="form-row">
+          <label>中文释义<input name="chinese" placeholder="选填" /></label
+          ><label>词性<input name="partOfSpeech" placeholder="noun / verb / adjective" /></label>
+        </div>
+        <label
+          >英文解释<textarea
+            name="definition"
+            rows="2"
+            placeholder="选填；留空时尝试在线补全"
+          ></textarea></label
+        ><label
+          >英文例句<textarea
+            name="example"
+            rows="2"
+            placeholder="选填；建议使用自然、完整的英文句子"
+          ></textarea></label
+        ><button class="button button-purple full" type="submit">
+          添加至词库 <span data-icon="plus"></span>
+        </button>
+      </form>
+      <div id="batch-panel" hidden>
+        <label class="dropzone" id="dropzone"
+          ><span data-icon="upload"></span><strong>点击选择，或拖入词汇表</strong
+          ><span>CSV / TSV / TXT / JSON · 最大 2 MB · 每批 2,000 词</span
+          ><input id="file-input" type="file" accept=".csv,.tsv,.txt,.json" class="sr-only"
+        /></label>
+        <div class="form-row">
+          <label>默认领域<select id="batch-category" class="category-select"></select></label
+          ><label
+            >文本格式<select id="batch-format">
+              <option value="words.txt">TXT（每行一个词）</option>
+              <option value="words.csv">CSV（带表头）</option>
+              <option value="words.tsv">TSV（带表头）</option>
+              <option value="words.json">JSON</option>
+            </select></label
+          >
+        </div>
+        <label
+          >或直接粘贴词汇<textarea
+            id="batch-text"
+            rows="6"
+            placeholder="itinerary&#10;thermal management&#10;stakeholder"
+          ></textarea>
+        </label>
+        <p class="small muted">
+          CSV 表头：word,category,chinese,definition,example。Excel 可另存为 UTF-8
+          CSV。重复词条会跳过。
+        </p>
+        <button class="text-button" id="template-button" type="button">下载 CSV 模板 ↓</button>
+        <div id="import-preview" hidden></div>
+        <div class="dialog-actions">
+          <button class="button button-white" id="preview-button">预览词条</button
+          ><button class="button button-purple" id="commit-import" disabled>确认导入</button>
+        </div>
+      </div>
+      <p class="form-feedback" id="import-feedback" role="status"></p>
+    </dialog>
+    <dialog id="study-dialog" class="study-dialog"><div id="study-content"></div></dialog>
+    <dialog id="settings-dialog" class="settings-dialog">
+      <div class="dialog-header">
+        <h2>让学习适合你</h2>
+        <button class="icon-button" data-close="settings-dialog" aria-label="关闭设置">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <label>美音语音<select id="voice-select"></select></label
+      ><label
+        >朗读速度<select id="rate-select">
+          <option value="0.7">0.7× · 慢速</option>
+          <option value="0.85">0.85× · 舒缓</option>
+          <option value="1">1× · 正常</option>
+        </select></label
+      ><button
+        class="button button-white"
+        data-speak="Welcome to Word Atlas. Let's explore the world together."
+      >
+        试听美音 <span data-icon="volume"></span>
+      </button>
+      <p class="small muted" id="voice-note"></p>
+      <hr />
+      <h3 id="backend-heading">后台自动补全</h3>
+      <p class="small muted" id="backend-note"></p>
+      <button class="button button-white" data-action="retry">重试所有待补充词条</button>
+      <hr />
+      <section id="service-access">
+        <h3>服务访问令牌</h3>
+        <label
+          >仅在服务端配置 APP_TOKEN 后需要<input
+            id="token-input"
+            type="password"
+            autocomplete="off"
+            placeholder="存于当前浏览器会话" /></label
+        ><button class="button button-purple" id="save-token">保存并连接</button>
+        <hr />
+      </section>
+      <section id="browser-progress-tools" hidden>
+        <h3>本机学习记录备份</h3>
+        <p class="small muted">
+          清理浏览器数据前请备份。恢复会合并记录，同名词条以备份中的进度为准；记录不会自动同步到其他设备。
+        </p>
+        <div class="dialog-actions">
+          <button class="button button-white" data-action="backup-progress">备份学习记录</button
+          ><button class="button button-white" data-action="restore-progress">恢复学习记录</button>
+        </div>
+        <input type="file" id="progress-file" accept=".json,application/json" hidden />
+        <hr />
+      </section>
+      <h3>词库导出</h3>
+      <p class="small muted" id="export-note">
+        导出内容包含词汇与学习资料。完整进度备份请复制 data 文件夹中的 SQLite 数据库。
+      </p>
+      <div class="dialog-actions">
+        <button class="button button-white" data-export="json">导出 JSON</button
+        ><button class="button button-white" data-export="csv">导出 CSV</button>
+      </div>
+    </dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>

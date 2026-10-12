@@ -1,0 +1,18 @@
+[
+  {
+    "word": "resilience",
+    "category": "business",
+    "chinese": "韧性",
+    "definition": "The ability to recover from difficulty.",
+    "example": "Resilience helps a team adapt to change.",
+    "partOfSpeech": "noun"
+  },
+  {
+    "word": "thermal conductivity",
+    "category": "energy",
+    "chinese": "导热系数",
+    "definition": "The ability of a material to conduct heat.",
+    "example": "Thermal conductivity affects heat transfer through a material.",
+    "partOfSpeech": "noun"
+  }
+]

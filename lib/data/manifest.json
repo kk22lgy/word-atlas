@@ -1,0 +1,30 @@
+{
+  "version": "2026-10-10.5000",
+  "total": 5000,
+  "phrases": 1291,
+  "categories": {
+    "daily": 3638,
+    "travel": 380,
+    "business": 430,
+    "energy": 552
+  },
+  "sources": [
+    {
+      "id": "wordnet-ecdict",
+      "definitionAndExamples": "WordNet 3.1 (wordnet-db 3.1.14)",
+      "translation": "ECDICT (ecdict 0.0.4)",
+      "wordnetUrl": "https://wordnet.princeton.edu/",
+      "ecdictUrl": "https://github.com/skywind3000/ECDICT",
+      "wordnetDataSHA256": "9b93831ae01771d02f360c1ebf3fe415ed2426a31f2201cb0943025c7403e79a",
+      "ecdictDataSHA256": "d0ce61e560b50d9905d20de3173aa3ca80950ce235bedd21c53e025cf9f38cb0"
+    },
+    {
+      "id": "curated",
+      "description": "Original Word Atlas learning material"
+    },
+    {
+      "id": "authored",
+      "description": "Original domain-specific concepts and explicitly selected collocations"
+    }
+  ]
+}

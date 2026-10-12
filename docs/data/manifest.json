@@ -1,0 +1,11 @@
+{
+  "version": "11c908f003818afb",
+  "total": 5000,
+  "phrases": 1291,
+  "categories": {
+    "daily": 3638,
+    "travel": 380,
+    "business": 430,
+    "energy": 552
+  }
+}

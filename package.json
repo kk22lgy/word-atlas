@@ -1,0 +1,21 @@
+{
+  "name": "word-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A personal English vocabulary studio for life, travel, business and energy storage.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/browser-api.js && node --check tools/build-pages.mjs",
+    "build:pages": "node tools/build-pages.mjs",
+    "preview:pages": "node tools/preview-pages.mjs"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}

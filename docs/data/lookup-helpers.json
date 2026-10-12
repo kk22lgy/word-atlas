@@ -1,0 +1,156 @@
+[
+  {
+    "word": "with",
+    "chinese": "和；具有",
+    "partOfSpeech": "preposition",
+    "definition": "Together with someone or using something.",
+    "example": "I share an apartment with a friend.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "the",
+    "chinese": "这个；该",
+    "partOfSpeech": "determiner",
+    "definition": "Used to refer to a particular or already known thing.",
+    "example": "The train leaves at nine.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "a",
+    "chinese": "一个",
+    "partOfSpeech": "determiner",
+    "definition": "Used before a singular countable noun when it is not yet specific.",
+    "example": "I bought a notebook for class.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "we",
+    "chinese": "我们",
+    "partOfSpeech": "pronoun",
+    "definition": "The speaker and one or more other people.",
+    "example": "We study English every evening.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "can",
+    "chinese": "能够；可以",
+    "partOfSpeech": "verb",
+    "definition": "Used to express ability or permission.",
+    "example": "You can borrow this book.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "for",
+    "chinese": "为了；供……用",
+    "partOfSpeech": "preposition",
+    "definition": "Intended to help or be used by someone or something.",
+    "example": "This notebook is for new vocabulary.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "to",
+    "chinese": "到；向",
+    "partOfSpeech": "preposition",
+    "definition": "In the direction of a person, place, or state.",
+    "example": "We walked to the station.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "and",
+    "chinese": "和；并且",
+    "partOfSpeech": "conjunction",
+    "definition": "Used to connect words or ideas.",
+    "example": "I ordered coffee and a sandwich.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "is",
+    "chinese": "是",
+    "partOfSpeech": "verb",
+    "definition": "The present singular form of be used with he, she, or it.",
+    "example": "The station is near our hotel.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "in",
+    "chinese": "在……里面",
+    "partOfSpeech": "preposition",
+    "definition": "Inside a place, period, or situation.",
+    "example": "The keys are in my bag.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "my",
+    "chinese": "我的",
+    "partOfSpeech": "determiner",
+    "definition": "Belonging to or associated with the speaker.",
+    "example": "My passport is in the drawer.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "our",
+    "chinese": "我们的",
+    "partOfSpeech": "determiner",
+    "definition": "Belonging to the speaker and other people.",
+    "example": "Our flight leaves tomorrow.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "please",
+    "chinese": "请",
+    "partOfSpeech": "adverb",
+    "definition": "Used to make a request more polite.",
+    "example": "Please close the window.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  },
+  {
+    "word": "have",
+    "chinese": "拥有；有",
+    "partOfSpeech": "verb",
+    "definition": "To own, hold, or experience something.",
+    "example": "I have a question about the schedule.",
+    "category": "daily",
+    "source": "curated",
+    "status": "ready",
+    "learningExcluded": true
+  }
+]
